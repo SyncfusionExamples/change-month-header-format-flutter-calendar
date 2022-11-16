@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(MontHeaderFormat());
+void main() => runApp(const MontHeaderFormat());
 
 class MontHeaderFormat extends StatefulWidget {
+  const MontHeaderFormat({super.key});
+
   @override
   State<StatefulWidget> createState() => ScheduleExample();
 }
@@ -23,7 +24,7 @@ class ScheduleExample extends State<MontHeaderFormat> {
                 child: SfCalendar(
                   view: CalendarView.day,
                   controller: _controller,
-                  allowedViews: [
+                  allowedViews: const [
                     CalendarView.day,
                     CalendarView.week,
                     CalendarView.workWeek,
@@ -81,4 +82,3 @@ class _AppointmentDataSource extends CalendarDataSource {
     appointments = source;
   }
 }
-
